@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean class="com.don.beans.Cache" factory-method="getInstance" id="cache"/>
+
+<bean class="com.don.beans.CacheManager" factory-method="getInstance" id="cacheManager"/>
+
+<bean class="com.don.beans.LoanCalculator" id="loanCalculator" depends-on="loanCalculator"/>
+
+<bean class="com.don.beans.LoanNotApplicableException"/>
+
+</beans>
